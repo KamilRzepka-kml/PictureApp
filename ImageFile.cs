@@ -11,7 +11,7 @@ namespace PictureApp
     {
         public OpenFileDialog CreateDialog()
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
+            var openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = @"C:\Users\rzepe\OneDrive\Pulpit\Informatyka\Programowanie obiektowe\kurs Kazik\PictureApp";
             openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
             return openFileDialog;

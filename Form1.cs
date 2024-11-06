@@ -15,6 +15,10 @@ namespace PictureApp
         public Form1()
         {
             InitializeComponent();
+            LastImage();
+        }
+        private void LastImage()
+        {
             string lastImagePath = Properties.Settings.Default.LastImagePath;
             if (!string.IsNullOrEmpty(lastImagePath) && System.IO.File.Exists(lastImagePath))
             {
@@ -24,6 +28,23 @@ namespace PictureApp
 
         private void btnAddPic_Click(object sender, EventArgs e)
         {
+            //try
+            //{
+            //    var addPicture = new ImageFileDialog();
+            //    OpenFileDialog openFileDialog = addPicture.CreateDialog();
+
+            //    if (openFileDialog.ShowDialog() == DialogResult.OK)
+            //    {
+            //        pcbZdjecie.Load(openFileDialog.FileName);
+            //        Properties.Settings.Default.LastImagePath = openFileDialog.FileName;
+            //        Properties.Settings.Default.Save();
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show($"Wystąpił błąd: {ex.Message}", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+
             var addPicture = new ImageFileDialog();
             OpenFileDialog openFileDialog = addPicture.CreateDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -33,6 +54,14 @@ namespace PictureApp
                 Properties.Settings.Default.Save();
             }
             openFileDialog.Dispose();
+        }
+
+        private void btnDelPic_Click(object sender, EventArgs e)
+        {
+
+            pcbZdjecie = null;
+            Properties.Settings.Default.LastImagePath = string.Empty;
+            Properties.Settings.Default.Save();
         }
     }
 }

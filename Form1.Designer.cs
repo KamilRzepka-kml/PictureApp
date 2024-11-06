@@ -37,7 +37,7 @@
             // pcbZdjecie
             // 
             this.pcbZdjecie.Location = new System.Drawing.Point(55, 50);
-            this.pcbZdjecie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbZdjecie.Margin = new System.Windows.Forms.Padding(2);
             this.pcbZdjecie.Name = "pcbZdjecie";
             this.pcbZdjecie.Size = new System.Drawing.Size(644, 402);
             this.pcbZdjecie.TabIndex = 0;
@@ -46,7 +46,7 @@
             // btnAddPic
             // 
             this.btnAddPic.Location = new System.Drawing.Point(293, 456);
-            this.btnAddPic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddPic.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddPic.Name = "btnAddPic";
             this.btnAddPic.Size = new System.Drawing.Size(56, 40);
             this.btnAddPic.TabIndex = 1;
@@ -57,12 +57,13 @@
             // btnDelPic
             // 
             this.btnDelPic.Location = new System.Drawing.Point(470, 456);
-            this.btnDelPic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelPic.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelPic.Name = "btnDelPic";
             this.btnDelPic.Size = new System.Drawing.Size(56, 40);
             this.btnDelPic.TabIndex = 0;
             this.btnDelPic.Text = "Usuń Zdjęcie";
             this.btnDelPic.UseVisualStyleBackColor = true;
+            this.btnDelPic.Click += new System.EventHandler(this.btnDelPic_Click);
             // 
             // Form1
             // 
@@ -72,7 +73,7 @@
             this.Controls.Add(this.btnDelPic);
             this.Controls.Add(this.btnAddPic);
             this.Controls.Add(this.pcbZdjecie);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pcbZdjecie)).EndInit();
