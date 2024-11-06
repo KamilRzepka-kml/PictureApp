@@ -15,12 +15,24 @@ namespace PictureApp
         public Form1()
         {
             InitializeComponent();
+            string lastImagePath = Properties.Settings.Default.LastImagePath;
+            if (!string.IsNullOrEmpty(lastImagePath) && System.IO.File.Exists(lastImagePath))
+            {
+                pcbZdjecie.Load(lastImagePath);
+            }
         }
 
         private void btnAddPic_Click(object sender, EventArgs e)
         {
-            pcbZdjecie.Load(C: \Users\rzepe\OneDrive\Pulpit\Informatyka\Programowanie obiektowe\kurs Kazik\PictureApp);
+            var addPicture = new ImageFileDialog();
+            OpenFileDialog openFileDialog = addPicture.CreateDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pcbZdjecie.Load(openFileDialog.FileName);
+                Properties.Settings.Default.LastImagePath = openFileDialog.FileName;
+                Properties.Settings.Default.Save();
+            }
+            openFileDialog.Dispose();
         }
-        
     }
 }

@@ -36,17 +36,19 @@
             // 
             // pcbZdjecie
             // 
-            this.pcbZdjecie.Location = new System.Drawing.Point(147, 61);
+            this.pcbZdjecie.Location = new System.Drawing.Point(55, 50);
+            this.pcbZdjecie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pcbZdjecie.Name = "pcbZdjecie";
-            this.pcbZdjecie.Size = new System.Drawing.Size(572, 368);
+            this.pcbZdjecie.Size = new System.Drawing.Size(644, 402);
             this.pcbZdjecie.TabIndex = 0;
             this.pcbZdjecie.TabStop = false;
             // 
             // btnAddPic
             // 
-            this.btnAddPic.Location = new System.Drawing.Point(384, 467);
+            this.btnAddPic.Location = new System.Drawing.Point(293, 456);
+            this.btnAddPic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddPic.Name = "btnAddPic";
-            this.btnAddPic.Size = new System.Drawing.Size(75, 49);
+            this.btnAddPic.Size = new System.Drawing.Size(56, 40);
             this.btnAddPic.TabIndex = 1;
             this.btnAddPic.Text = "Dodaj Zdjęcie";
             this.btnAddPic.UseVisualStyleBackColor = true;
@@ -54,21 +56,23 @@
             // 
             // btnDelPic
             // 
-            this.btnDelPic.Location = new System.Drawing.Point(384, 522);
+            this.btnDelPic.Location = new System.Drawing.Point(470, 456);
+            this.btnDelPic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelPic.Name = "btnDelPic";
-            this.btnDelPic.Size = new System.Drawing.Size(75, 49);
+            this.btnDelPic.Size = new System.Drawing.Size(56, 40);
             this.btnDelPic.TabIndex = 0;
             this.btnDelPic.Text = "Usuń Zdjęcie";
             this.btnDelPic.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(874, 583);
+            this.ClientSize = new System.Drawing.Size(761, 507);
             this.Controls.Add(this.btnDelPic);
             this.Controls.Add(this.btnAddPic);
             this.Controls.Add(this.pcbZdjecie);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pcbZdjecie)).EndInit();
