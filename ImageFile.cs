@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,8 +13,18 @@ namespace PictureApp
         public OpenFileDialog CreateDialog()
         {
             var openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = @"C:\Users\rzepe\OneDrive\Pulpit\Informatyka\Programowanie obiektowe\kurs Kazik\PictureApp\pictures";
-            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+
+            var somePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+
+            if (Directory.Exists(somePath))
+            {
+                openFileDialog.InitialDirectory = somePath;
+            }
+            else
+            {
+                openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            }
+
             return openFileDialog;
         }
 

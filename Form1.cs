@@ -17,6 +17,7 @@ namespace PictureApp
             InitializeComponent();
             LastImage();
         }
+
         private void LastImage()
         {
             string lastImagePath = Properties.Settings.Default.LastImagePath;
@@ -24,14 +25,15 @@ namespace PictureApp
             {
                 pcbZdjecie.Load(lastImagePath);
             }
-            ShowDeleteBtn();
+            DeleteBtnVisible();
         }
 
         private void btnAddPic_Click(object sender, EventArgs e)
         {
-            LastImageShow();
+            LastImageVisible();
         }
-        private void LastImageShow()
+
+        private void LastImageVisible()
         {
             var addPicture = new ImageFileDialog();
             OpenFileDialog openFileDialog = addPicture.CreateDialog();
@@ -42,8 +44,9 @@ namespace PictureApp
                 Properties.Settings.Default.Save();
             }
             openFileDialog.Dispose();
-            ShowDeleteBtn();
-        }
+            DeleteBtnVisible();
+        } 
+
         private void ClearPictureBox()
         {
             pcbZdjecie.Image = null;
@@ -55,7 +58,8 @@ namespace PictureApp
         {
             ClearPictureBox();
         }
-        private void ShowDeleteBtn()
+
+        private void DeleteBtnVisible()
         {
             btnDelPic.Visible = pcbZdjecie.Image != null;
         }
