@@ -14,7 +14,7 @@ namespace PictureApp
         {
             var openFileDialog = new OpenFileDialog();
 
-            var somePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+            var somePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),"pictures");
 
             if (Directory.Exists(somePath))
             {
